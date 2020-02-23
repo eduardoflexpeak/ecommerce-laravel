@@ -22,6 +22,8 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
     @else
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    @include('adminlte::plugins', ['type' => 'css'])
+    @yield('adminlte_css')
     @endif
 </head>
 <body class="@yield('classes_body')" @yield('body_data')>
@@ -38,6 +40,8 @@
 @yield('adminlte_js')
 @else
 <script src="{{ asset('js/app.js') }}"></script>
+@include('adminlte::plugins', ['type' => 'js'])
+@yield('adminlte_js')
 @endif
 
 </body>
